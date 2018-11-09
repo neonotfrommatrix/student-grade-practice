@@ -1,2 +1,4 @@
 # student-grade-practice
-Practicing JavaScript with a simple layout
+Simple webage practicing HTML, CSS, and JavaScript.
+
+Students are hardcoded. Please search for the last name: "Gonzalez".
