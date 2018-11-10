@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="table.css">
+    <script src="model.js" type="text/javascript" async></script>
+    <script src="control.js" type="text/javascript" async></script>
     <title>Student Grade Results</title>
   </head>
 
@@ -15,28 +17,72 @@
     <tr>
       <th scope="row" colspan="2"><p>Last name:
       <!--this will show the names of students entered. We are hard coding students with last name Gonzalez -->
-      <input type="text" placeholder="Last Name"> <button type="button" onclick="showNames()">Search</button></p></th>
-
-<script>
-function showNames() {
-  document.getElementById("names1").innerHTML = "Amy Gonzalez";
-  document.getElementById("names2").innerHTML = "Ben Gonzalez";
-  document.getElementById("names3").innerHTML = "Steve Gonzalez";
-}
-</script>
+      <input type="text" id="myText" placeholder="Last Name"> <button id="searchbtn" type="button" onclick="showNames()">Search</button></p></th>
+      <script>
+      function showNames() {
+        document.getElementById("names1").innerHTML = "Amy Gonzalez";
+        document.getElementById("names2").innerHTML = "Ben Gonzalez";
+        document.getElementById("names3").innerHTML = "Steve Gonzalez";
+      }
+      </script>
 
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">Students Found</th>
-      <td>Grades For</td>
+      <td>Grades For <strong> <span id="studentName"></span></strong> </td>
     </tr>
     <tr>
-      <th scope="row"><p id="names1"></p><br>
-        <p id="names2"></p><br>
-        <p id='names3'></p>
+      <th scope="row">
+
+        <p id="names1" onclick="amyGrades()"></p><br>
+        <p id="names2" onclick ="benGrades()"></p><br>
+        <p id="names3" onclick="steveGrades()"></p>
+
       </th>
+
+<script>
+function amyGrades() {
+  document.getElementById("studentName").innerHTML = "Amy Gonzalez";
+  document.getElementById("class1").innerHTML = "History";
+  document.getElementById("grade1").innerHTML = "A";
+  document.getElementById("class2").innerHTML = "Philosophy";
+  document.getElementById("grade2").innerHTML = "B";
+  document.getElementById("class3").innerHTML = "Biology";
+  document.getElementById("grade3").innerHTML = "C";
+  document.getElementById("class4").innerHTML = "Ethics of Computer Science";
+  document.getElementById("grade4").innerHTML = "D";
+}
+
+function benGrades() {
+    document.getElementById("studentName").innerHTML = "Ben Gonzalez";
+  document.getElementById("class1").innerHTML = "Computer Science Theory";
+  document.getElementById("grade1").innerHTML = "F";
+  document.getElementById("class2").innerHTML = "Mechanical Engineering";
+  document.getElementById("grade2").innerHTML = "C";
+  document.getElementById("class3").innerHTML = "Welding";
+  document.getElementById("grade3").innerHTML = "F";
+  document.getElementById("class4").innerHTML = "Womens Gender Studies";
+  document.getElementById("grade4").innerHTML = "A";
+}
+function steveGrades() {
+    document.getElementById("studentName").innerHTML = "Steve Gonzalez";
+  document.getElementById("class1").innerHTML = "Geology";
+  document.getElementById("grade1").innerHTML = "B";
+  document.getElementById("class2").innerHTML = "Elementary Spanish";
+  document.getElementById("grade2").innerHTML = "A";
+  document.getElementById("class3").innerHTML = "Anthropology";
+  document.getElementById("grade3").innerHTML = "B";
+  document.getElementById("class4").innerHTML = "Software Engineering Concepts";
+  document.getElementById("grade4").innerHTML = "A";
+}
+
+</script>
+
+
+
+
       <td><table>
     <tr>
       <th>Course</th>
